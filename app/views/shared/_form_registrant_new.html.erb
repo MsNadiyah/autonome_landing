@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-md-5">
+      <h4>Tell us about your health care needs</h4> 
+    </div>
+
+    <div class="col-md-3">
+      <h8 id="required-fields">All fields required</h8>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <form class="form-inline">
+
+      <%= form_for @registrant, html: { class: "form", :multipart => true } do |f| %>
+
+          <%= f.text_field :name, { class: "form-control col-md-4 form-field" ,:placeholder => "First & last name" } %>
+          <%= f.text_field :email, { class: "form-control col-md-4 form-field" ,:placeholder => "Email address" } %>
+          <%= f.text_field :company, { class: "form-control col-md-4 form-field" ,:placeholder => "Company" } %>
+
+      <% end %>
+
+    </form>
+
+  </div>
+
+</div>
