@@ -7,3 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+# Creating seed data for the "Registrant Type" table, only will be created if it doesn't already exist
+
+RegistrantType.where(name: "For me").first_or_create!
+RegistrantType.where(name: "For my company").first_or_create!
