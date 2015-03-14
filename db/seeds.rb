@@ -9,5 +9,7 @@
 
 # Creating seed data for the "Registrant Type" table, only will be created if it doesn't already exist
 
-RegistrantType.where(name: "For me").first_or_create!
-RegistrantType.where(name: "For my company").first_or_create!
+Registrant.destroy_all
+
+RegistrantType.where(name: "for me").first_or_create!
+RegistrantType.where(name: "for my company").first_or_create!
